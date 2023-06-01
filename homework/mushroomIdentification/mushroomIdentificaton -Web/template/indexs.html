@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="../node_modules/CSS/global.css">
+  <link rel="stylesheet" href="../node_modules/CSS/Index.css">
+</head>
+<body>
+<div class="wrapper">
+  <header>
+    <div class="title">
+      <img src="../node_modules/Image/logo.png" class="logo" width="20%" height="100%">
+
+      <div class="userMenu">
+        <img src="../node_modules/Image/user.png" style="border-radius: 50%" width="98%" height="98%" >
+        <ul class="menu" style="position: relative;width: 100%;height: 100%">
+          <li class="mine"><button>我的</button></li>
+          <li class="chat"><button onclick="ChatDisplay()">Chat</button></li>
+          <li class="history"><button onclick="ScrollHis()">记录</button></li>
+          <li class="exit"><button onclick="Exit()">退出</button></li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="background">
+      <img class="Imgframe" src="../node_modules/Image/Imgframe.png">
+    </div>
+  </header>
+  <div class="chatNav" style="display: none">
+    <button onclick="CloseChat()">X</button>
+    <div class="chatNav-header">ChatBot</div>
+    <div class="chatNav-body">
+      <ul>
+        <li>请把要询问的内容发送给我吧!</li>
+
+      </ul>
+    </div>
+    <div class="chatNav-subQues">
+      <input class="input" type="text" name="Text" placeholder="请输入您要发送的问题">
+      <div class="subQuesBnt" onclick="AppendQuestions()">发送</div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="navBody" style="height: 80%;width: 100%">
+      <ul>
+        <li class="preview">
+          <i class="fa fa-plus"></i>
+          <input type="file" class="openFile upload" title="" >
+        </li>
+        <li class="predict">
+          <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+          <div class="camera">
+            <video id="video" width="100%" height="100%" autoplay="autoplay" style="position: absolute;left: 0"></video>
+            <button class="takePhoto" style="visibility: hidden;top: 17vw;left: 50%;transform: translateX(-50%)" onclick="takePhoto()">
+              <i class="fa fa-camera-retro" style="color:black"></i>
+            </button>
+            <button class="closeMedia" style="left: 80%;visibility: hidden" onclick="closeMedia()">
+              <i class="fa fa-close" style="position:relative;color: red"></i>
+            </button>
+          </div>
+        </li>
+      </ul></div>
+    <ul class="footer">
+      <div class="predictBnt">开始识别</div>
+      <li><input type="file" class="fileBnt upload" accept="image/jpeg, image/png, image/jpg">&nbsp<i class="fa fa-photo" style="z-index: 1"></i><p>相册</p></li>
+      <li><button onclick="openMedia()">&nbsp<i class="fa fa-camera"></i><p>相机</p></button></li>
+      <li><input type="file" class="fileBnt videoBnt" accept="video/mp4">&nbsp<i class="fa fa-file-video-o"></i><p>视频</p></li>
+    </ul>
+  </div>
+  <div class="history-record">
+    <div class="title-menu">
+      <div class="tab-bnt">
+        <button style="border-radius: 30px 0 0 30px">图片记录</button>
+        <button style="border-radius:  0 30px 30px 0">视频记录</button>
+        <div class="slider"></div>
+      </div>
+    </div>
+    <div class="menu" style="float: left">
+      <button onclick="selectDisplay()" class="selectActive"><i title="选择" class="fa fa-external-link" ></i></button>
+      <button disabled onclick="selectCheckedAll()" class="checkAll"><i title="全选" class="fa fa-check-circle-o"></i></button>
+      <button disabled class="deleteItem" onclick="selectDelete()"><i title="删除" class="fa fa-trash" ></i></button>
+    </div>
+    <div class="history-nav">
+      <div class="predict-img-history record-nav" style="border: 1px solid #dddddd;">
+        <ul class="img-item">
+
+        </ul>
+      </div>
+      <div class="predict-video-history record-nav" style="display: none;border: 1px solid #dddddd;">
+        <ul class="video-item">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="../node_modules/JS/Index.js"></script>
+</body>
+</html>

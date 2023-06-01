@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>登录</title>
+  <link rel="stylesheet" href="../node_modules/CSS/Login.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<img src="../node_modules/Image/logo.png" class="logo">
+<div class="login" >
+  <div class="LoginPart">
+    <div class="InputPart">
+      <span>登录</span>
+      <div class="InputFrame">
+        <div><i class="fa fa-user-circle-o" style="vertical-align:middle;"></i><input type="text" autofocus id="inputPhone"></div>
+        <div><i class="fa fa-keyboard-o" style="vertical-align:middle;"></i><input type="password" id="inputPwd"></div>
+        <button class="LoginButton">登录</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="RegisterPart">
+    <div class="RegisterFrame">
+      <span>注册</span>
+      <div class="form">
+        <div class="name">
+          <input type="text" placeholder="请输入用户名">
+          <i class="#"></i>
+        </div><br>
+
+        <div class="phone">
+          <input type="text" placeholder="请输入手机号">
+          <i class="#"></i>
+        </div><br>
+
+        <div class="pwd"><input type="password" placeholder="请输入密码">
+          <i class="#"></i>
+        </div><br>
+
+        <div class="confirmPwd"><input type="password" placeholder="请确认密码">
+          <i class="#"></i>
+        </div>
+        <button class="RegisterButton">注册</button><br>
+      </div>
+    </div>
+  </div>
+  <div class="mask" style="font-size: 25px;font-family: 华文中宋">
+    <img src="../node_modules/Image/logo.png" width="250" height="100" style="margin-top: 50px">
+    <p>欢迎使用</p>
+    <p class="content"></p>
+    <button class="move" onclick="Move()">点击登录</button>
+  </div>
+</div>
+<script src="../node_modules/JS/Login.js"></script>
+</body>
+</html>
